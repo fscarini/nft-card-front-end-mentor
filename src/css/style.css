@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+html{
+    font-family: 'Outfit', sans-serif;
+}
+
+body{
+    background-color: var(--neutral-dark);
+}
+
+.wraper{
+    height: 100vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.card{
+    max-width: 350px; 
+    background-color: var(--neutral-medium);
+    border-radius: 12px;
+    padding: 22px;
+}
+
+.img-link .nft-card-img{
+    width: 100%;
+    border-radius: 4px;
+}
+
+.img-link{
+    position: relative;
+    display:flex;
+}
+
+.img-link::before{
+    content:'';
+    background-color: var(--primary-medium);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.img-link::after{
+    content: '';
+    background-image: url(../images/icon-view.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.img-link:hover::before{
+    opacity: 0.4;
+}
+
+.img-link:hover::after{
+    opacity: 1;
+}
+
+.title-link .title{
+    font-size: 22px;
+    color:#FFFFFF;
+    margin: 25px 0 20px;
+}
+
+.title-link .title:hover{
+    color:var(--primary-medium);
+}
+
+.about{
+    color: var(--primary-soft);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25px;
+}
+
+.card-info{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 20px;
+}
+
+.eth{
+    color:var(--primary-medium);
+    display: flex;
+}
+
+.eth::before{
+    content:'';
+    background-image: url(../images/icon-ethereum.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 11px;
+    height: 20px;
+    display:inline-block;
+    margin-right: 5px;
+}
+
+.time-left{
+    color: var(--primary-soft);
+    display: flex;
+}
+
+.time-left::before{
+    content:'';
+    background-image: url(../images/icon-clock.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 15px;
+    height: 20px;
+    display:inline-block;
+    margin-right: 5px;
+}
+
+.card-footer{
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--primary-soft);
+    padding-top: 15px;
+}
+
+.card-footer .creator{
+    max-width: 35px;
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.card-footer .creator-text{
+    color: var(--primary-soft);   
+}
+
+.card-footer .creator-text .name{
+    color: #FFFFFF;
+}
+
+.card-footer .creator-text .name:hover{
+    color:var(--primary-medium);
+}
